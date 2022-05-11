@@ -5,8 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Reader {
-	
-		 Gerador gerador = new Gerador();
 		 String[][] aux = new String[10][2];
 		 int angulo, etapas, regras;
 		 String axioma;
@@ -30,12 +28,12 @@ public class Reader {
 						System.out.print(axioma+"\n");
 					}
 					else if (i == 3) {
-						angulo = Integer.parseInt(linha.substring(linha.indexOf(':')+1,linha.length()-2).replace(" ", ""));
+						angulo = Integer.parseInt(linha.substring(linha.indexOf(':')+1,linha.length()-1).replace(" ", ""));
 						System.out.print(angulo+"\n");
 					}
 					else if(i>3) {
 						aux[j][0]=linha.substring(linha.indexOf(':')+1,linha.indexOf("→")).replace(" ", "");
-						aux[j][1]=linha.substring(linha.indexOf("→")+4).replace(" ", "");
+						aux[j][1]=linha.substring(linha.indexOf("→") + 1).replace(" ", "");
 						System.out.print(aux[j][0]+"\n");
 						System.out.print(aux[j][1]+"\n");
 						regras=j;

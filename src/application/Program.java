@@ -12,6 +12,7 @@ public class Program {
 
         try {
             String saida = rd.efetuarLeitura("");
+            System.out.print(saida);
             int angulo = rd.getAngulo();
             gerador.GerarDesenho(saida, angulo);
             System.out.print(saida+"\n");
